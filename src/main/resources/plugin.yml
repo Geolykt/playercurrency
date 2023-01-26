@@ -1,0 +1,30 @@
+name: PlayerCurrency
+main: de.geolykt.playercurrency.PlayerCurrency
+api-version: 1.18
+version: ${project.version}
+softdepend: [Treasury]
+commands:
+  cinfo:
+    description: Shows information about a currency; /cinfo [abbreviation|name]
+    usage: /cinfo [abbreviation|name]
+  ccreate:
+    description: Creates a currency; /ccreate [name] [abbreviation]
+    usage: /ccreate [name] [abbreviation]
+  cmanage:
+    description: Manages a currency. See /cmanage for specifics
+    usage: /cmanage
+  balance:
+    description: Shows the balances of a player or yourself.
+    usage: /balance <player>
+    aliases: [bal, money] 
+  pay:
+    description: Pays a player
+    usage: /pay [player] [currency] [amount]
+  balancetop:
+    description: Shows the richest owners of a currency
+    usage: /balancetop [abbreviation|name]
+    aliases: [baltop, moneytop]
+permissions:
+  playercurrency.create:
+    description: Allows creating currencies
+    default: true
